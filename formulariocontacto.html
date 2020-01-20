@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title></title>
+
+<style>
+.contact_form h2 {
+    background: none repeat scroll 0 0 #c1bfbf;
+    border-radius: 5px;
+    color: #164a20;
+    display: block;
+    font-family: calibri;
+    font-size: 20px;
+    padding: 5px;
+    text-shadow: 1px 1px 1px #CCCCCC;
+    width: 433px;
+}
+/*--- estilos para los ul y li del formulario ---*/
+.contact_form ul {
+    width:600px;
+    list-style-type:none;
+	margin:0px;
+	padding:0px;
+}
+.contact_form li{
+	padding:12px; 
+	border-bottom:1px solid #eee;
+	position:relative;
+} 
+.contact_form label {
+    color: #555555;
+    display: inline-block;
+    float: left;
+    font-family: calibri;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 3px;
+    padding: 3px;
+    width: 90px;
+}
+.contact_form input {
+height:20px; 
+width:220px; 
+padding:5px 8px;
+}
+.contact_form textarea {
+padding:8px; 
+width:300px;
+}
+.contact_form button {
+margin-left:90px;
+}
+ 
+/*----- estilos visuales de los elementos --------*/
+ 
+.contact_form input, .contact_form textarea { 
+border:1px solid #aaa;
+box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
+border-radius:2px;
+color: #888;
+font-size: 12px;
+padding-right:30px;
+-moz-transition: padding .25s; 
+-webkit-transition: padding .25s; 
+-o-transition: padding .25s;
+transition: padding .25s;
+}
+.contact_form input:focus, .contact_form textarea:focus {
+background: #fff; 
+border:1px solid #555; 
+box-shadow: 0 0 3px #aaa; 
+padding-right:80px;
+}
+ 
+/* === Estilos de Validacion === */ 
+ 
+.contact_form input:required:valid, .contact_form textarea:required:valid {
+box-shadow: 0 0 5px #5cd053;
+border-color: #28921f;
+}
+.contact_form input:focus:invalid, .contact_form textarea:focus:invalid {
+box-shadow: 0 0 5px #d45252;
+border-color: #b03535;
+}
+ 
+/* === Estilos del boton de Envio === */
+button.submit {
+   padding: 9px 17px;
+   font-family: Helvetica,calibri, Arial, sans-serif;
+   font-weight: bold;
+   line-height: 1;
+   color: #444;
+   border: none;
+   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.85);
+   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#bbb));
+   background-image: -moz-linear-gradient(0% 100% 90deg, #BBBBBB, #FFFFFF);
+   background-color: #fff;
+   border: 1px solid #f1f1f1;
+   border-radius: 10px;
+   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+button.submit:hover {
+	opacity:.55;
+	cursor: pointer; 
+	color: #fff;
+}
+button.submit:active {
+	border: 1px solid #222;
+	box-shadow: 0 0 10px 5px #444 inset; 
+}
+fieldset{
+	width:330px;
+	border-radius:10px;
+	border:1px solid #eee;
+}
+	
+input[type="radio"]{
+	width:30px;
+	float:left;
+	background: #fff; 
+	border:1px solid #555; 
+	box-shadow: 0 0 3px #aaa; 
+	padding-right:80px;
+}
+</style>
+
+</head>
+
+<body>
+
+<form class="contact_form" action="enviar.php" method="post" >
+    <ul>
+        <li>
+             <h2>Nuevo Formulario de Contacto</h2>
+        </li>
+        <li>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre"  placeholder="Ingresa tu nombre" required />
+        </li>
+        <li>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="email@dominio.com" required />
+        </li>
+
+<!--
+
+         <li>
+            <label for="website">Sitio Web:</label>
+            <input type="url" name="web" placeholder="sitio web" required />
+        </li>
+
+        <li>
+        <fieldset>
+        <legend> Edad </legend>
+        	<input type="radio" name="edad" value="menor" checked>
+        	<label>Entre 5 y 19</label>
+        	<input type="radio" name="edad" value="mayor">
+        	<label>Entre 20 y 50</label>
+        </fieldset>
+
+
+      
+        </li> -->
+     <li>
+            <label for="Mensaje">Mensaje:</label>
+            <textarea name="mensaje" cols="40" rows="6" required ></textarea>
+        </li>
+        <li>
+         <button class="submit" type="submit">Enviar</button>
+        </li>
+    </ul>
+</form>
+
+</body>
+</html>
